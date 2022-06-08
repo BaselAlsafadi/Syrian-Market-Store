@@ -1,6 +1,5 @@
-import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:sym/screens/homepage.dart';
+import 'package:sym/screens/start-secreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,17 +16,25 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: EasySplashScreen(
-          logo: Image.asset('assets/images/logoo.png'),
-          backgroundColor: const Color(0xFFFE5917),
-          showLoader: false,
-          loadingText: const Text(
-            'Wellcome To Syrian Market Store',
-            style:
-                TextStyle(fontWeight: FontWeight.bold, color: Colors.black87),
-          ),
-          navigator: const HomePage(),
-          durationInSeconds: 4,
-        ));
+        home: SplashScreen()
+        // EasySplashScreen(
+        //   logoSize: 100,
+        //   logo: Image.asset(
+        //     'assets/images/1221212.png',
+        //     height: 1,
+        //     width: 1,
+        //   ),
+        //   backgroundImage: AssetImage(
+        //     'assets/images/1221212.png',
+        //   ),
+        //   showLoader: false,
+        //   // loadingText: const Text(
+        //   //   " Loading ..",
+        //   //   style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+        //   // ),
+        //   navigator: (),
+        //   durationInSeconds: 5,
+        // )
+        );
   }
 }

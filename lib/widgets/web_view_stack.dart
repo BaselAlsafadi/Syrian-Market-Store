@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:sym/screens/nointernet_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewStack extends StatefulWidget {
@@ -16,38 +17,44 @@ class _WebViewStackState extends State<WebViewStack> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        WebView(
-          initialUrl: 'http://sym.badaelonline.com/login',
-          javascriptMode: JavascriptMode.unrestricted,
-          onWebViewCreated: (webViewController) {
-            widget.controller.complete(webViewController);
-          },
-          // ... to here.
-          onPageStarted: (url) {
-            setState(() {
-              loadingPercentage = 0;
-            });
-          },
-          onProgress: (progress) {
-            setState(() {
-              loadingPercentage = progress;
-            });
-          },
-          onPageFinished: (url) {
-            setState(() {
-              loadingPercentage = 100;
-            });
-          },
-        ),
-        if (loadingPercentage < 100)
-          LinearProgressIndicator(
-            value: loadingPercentage / 100.0,
-            backgroundColor: Colors.white,
-            color: Color(0xFFFE5917),
-          ),
-      ],
+    return Padding(
+      padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 30),
+      child: WebView(
+        initialUrl: 'http://sym.badaelonline.com/login',
+        javascriptMode: JavascriptMode.unrestricted,
+        onWebViewCreated: (webViewController) {
+          widget.controller.complete(webViewController);
+          webViewController.runJavascript(
+              "document.getElementsByClassName('header-bg')[0].style.display='none';");
+          webViewController.runJavascript(
+              "document.getElementsByTagName('id=footer')[0].style.display='none'");
+        },
+
+        // ... to here.
+        onPageStarted: (url) {
+          setState(() async {
+            loadingPercentage = 0;
+          });
+        },
+        onWebResourceError: (ErrorWidget) {
+          setState(() {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const NoInternet()),
+            );
+          });
+        },
+        onProgress: (progress) {
+          setState(() {
+            loadingPercentage = progress;
+          });
+        },
+        onPageFinished: (url) {
+          setState(() {
+            loadingPercentage = 100;
+          });
+        },
+      ),
     );
   }
 }
