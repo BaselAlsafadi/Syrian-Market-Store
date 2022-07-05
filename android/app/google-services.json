@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "358748817145",
+    "project_id": "syriamarket-fa900",
+    "storage_bucket": "syriamarket-fa900.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358748817145:android:37dfaff04b223a17c20428",
+        "android_client_info": {
+          "package_name": "com.example.sym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358748817145-h7nuh0tnga4lu4gctlusuh7tbhdkbl75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk2HzYSMe0mZxQUNSWel_6LpnYIAH-pGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358748817145-h7nuh0tnga4lu4gctlusuh7tbhdkbl75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358748817145:android:cbdc4a75806987c1c20428",
+        "android_client_info": {
+          "package_name": "com.syria.market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358748817145-h7nuh0tnga4lu4gctlusuh7tbhdkbl75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk2HzYSMe0mZxQUNSWel_6LpnYIAH-pGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358748817145-h7nuh0tnga4lu4gctlusuh7tbhdkbl75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

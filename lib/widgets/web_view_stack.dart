@@ -20,7 +20,7 @@ class _WebViewStackState extends State<WebViewStack> {
     return Padding(
       padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 30),
       child: WebView(
-        initialUrl: 'http://sym.badaelonline.com/login',
+        initialUrl: 'https://market-syria.com/',
         javascriptMode: JavascriptMode.unrestricted,
         onWebViewCreated: (webViewController) {
           widget.controller.complete(webViewController);

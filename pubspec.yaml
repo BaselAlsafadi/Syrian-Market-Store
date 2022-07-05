@@ -17,7 +17,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   webview_cookie_manager: ^2.0.6
   easy_splash_screen: ^1.0.3
-  simple_animations: ^4.0.1 
+  simple_animations: ^4.0.1
+  firebase_messaging: ^11.2.7 
 
 
 dev_dependencies:

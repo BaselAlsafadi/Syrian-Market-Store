@@ -25,7 +25,7 @@ class _LodoFadeState extends State<LodoFade> {
         return Container(
           width: value.get(Prop.width),
           height: value.get(Prop.height),
-          child: Image.asset('assets/images/12png.png'),
+          child: Image.asset('assets/images/new.jpeg'),
         );
       },
     );

@@ -2,7 +2,6 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:simple_animations/simple_animations.dart';
 import 'package:sym/screens/homepage.dart';
 import 'package:sym/widgets/logo_fade.dart';
 
@@ -39,18 +38,12 @@ class SplashState extends State<SplashScreen> {
 
   initScreen(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFF7F7F7),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             LodoFade(),
-
-            // Container(
-            //   width: 300,
-            //   height: 300,
-            //   child: Image.asset("assets/images/12png.png"),
-            // ),
             const SizedBox(
               height: 15,
             ),
