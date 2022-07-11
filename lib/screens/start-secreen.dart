@@ -55,7 +55,8 @@ class SplashState extends State<SplashScreen> {
               "Loading..",
               style: TextStyle(
                   fontSize: 20.0,
-                  color: Color(0xffB4822C),
+                  // color: Color(0xffF2632A),
+                  color: Colors.black,
                   fontWeight: FontWeight.bold),
             ),
           ],
